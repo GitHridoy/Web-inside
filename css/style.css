@@ -1,0 +1,287 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+html, body{
+   width: 100%;
+   height: 100%;
+   margin: 0;
+   padding: 0;
+   overflow-x: hidden;
+}
+a, h2, h1, h3{
+    margin: 0;
+    padding: 0;
+}
+:root{
+    --main-color: rgb(0, 100, 214);
+}
+img{
+    width: 100%;
+    
+}
+#header-main{
+    width: 100%;
+    height: 3.5rem;
+    background-color: var(--main-color);
+}
+#nav-main{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+#nav-main .logo{
+    width: 45px;
+    height: 45px;
+    border: 1px solid #fff;
+    padding: 0.5rem;
+    border-radius: 50%;
+    margin-top: 0.4rem;
+    
+}
+#nav-main .logo img{
+    border-radius: 50%;
+}
+
+#nav-main ul{
+    display: flex;
+    gap: 2rem;
+}
+#nav-main ul li{
+    list-style: none;
+
+}
+#nav-main .active{
+    border-bottom: 2px solid;
+}
+#nav-main ul li a{
+    text-decoration: none;
+    color: rgb(218, 218, 218);
+    font-weight: 600;
+    letter-spacing: .12rem;
+    padding-bottom: 0.3rem;
+}
+#nav-main ul li a:hover{
+    color: rgb(253, 249, 0);
+    transition: 0.7s;
+}
+#nav-main button{
+    padding: 5px 15px;
+    cursor: pointer;
+}
+.toggle{
+    display: none;
+}
+/* Home section  */
+#Home{
+    background-color: var(--main-color);
+}
+.home-main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1000px;
+    margin: auto;
+    
+}
+.home-main .box{
+    width: 450px;
+}
+.box .main-title{
+    font-size: 5rem;
+    text-shadow: 2px 0 3px rgba(0, 150, 130, 0.8);
+    text-align: center;
+}
+.box h2{
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+.box h3{
+    font-size: 1.5rem;
+}
+.box > h1{
+    font-size: 5rem;
+}
+.box img{
+    width: 450px;
+
+}
+
+
+/* Styles for smartphones */
+@media only screen and (max-width: 480px) {
+    body{
+        overflow-x: hidden;
+    }
+    #header-main{
+        height: 5rem;
+        transition: 0.5s;
+      }
+      #header-main.head-spand{
+        height: 20rem;
+        transition: 0.5s;
+      }
+       #nav-main{
+         flex-direction: column;
+       }
+       #nav-main{
+          
+       }
+       #nav-main .logo{
+          position: relative;
+          left: -11rem;
+          top: 1rem;
+       }
+       #nav-main ul{
+          flex-direction: column;
+          visibility: hidden;
+          position: relative;
+          top: -100px;
+          
+       }
+       #ul-menu.ul-active{
+          visibility: visible;
+          transform: translateY(100px);
+          transition: 0.4s ease;
+       }
+       #nav-main .login-main{
+          margin-top: 0.5rem;
+       }
+       .toggle{
+          display: block;
+          position: relative;
+          top: -250px;
+          left: 390px;
+       }
+       .toggle #menu-bar{
+          position: relative;
+          left: 23px;
+          color: white;
+          cursor: pointer;
+       }
+       #menu-bar.menu-hide{
+          visibility: hidden;
+       }
+       .toggle #close-bar{
+          color: white;
+          visibility: hidden;
+          cursor: pointer;
+       }
+       #close-bar.close-active{
+          visibility: visible;
+       }
+       .login-main{
+        display: none;
+       }
+       /* Home section  */
+     .home-main{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: auto;
+        padding-top: 3rem;
+        
+     }
+     .box{
+        margin-bottom: 3rem;
+     }
+     .main-title{
+        text-align: center;
+        font-size: 4rem !important;
+     }
+     .sub-title, h3{
+        text-align: center;
+     }
+  }
+  
+  /* Styles for tablets */
+  @media only screen and (min-width: 481px) and (max-width: 768px) {
+    body{
+        overflow-x: hidden;
+    }
+    #header-main{
+        height: 5rem;
+        transition: 0.5s;
+      }
+      #header-main.head-spand{
+        height: 20rem;
+        transition: 0.5s;
+      }
+       #nav-main{
+         flex-direction: column;
+       }
+       #nav-main{
+          
+       }
+       #nav-main .logo{
+          position: relative;
+          left: -19rem;
+          top: 1rem;
+       }
+       #nav-main ul{
+          flex-direction: column;
+          visibility: hidden;
+          position: relative;
+          top: -100px;
+          left: -100px;
+       }
+       #ul-menu.ul-active{
+          visibility: visible;
+          transform: translateY(100px);
+          transition: 0.4s ease;
+       }
+       #nav-main .login-main{
+          margin-top: 0.5rem;
+       }
+       .toggle{
+          display: block;
+          position: relative;
+          top: -250px;
+          left: 390px;
+       }
+       .toggle #menu-bar{
+          position: relative;
+          left: 23px;
+          color: white;
+          cursor: pointer;
+       }
+       #menu-bar.menu-hide{
+          visibility: hidden;
+       }
+       .toggle #close-bar{
+          color: white;
+          visibility: hidden;
+          cursor: pointer;
+       }
+       #close-bar.close-active{
+          visibility: visible;
+       }
+       .login-main{
+        display: none;
+       }
+       /* Home section  */
+     .home-main{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: auto;
+        
+     }
+     .box{
+        margin-bottom: 3rem;
+     }
+     .main-title{
+        text-align: center;
+        font-size: 4rem !important;
+     }
+     .sub-title, h3{
+        text-align: center;
+     }
+  }
+  
+  /* Styles for small devices */
+  @media only screen and (min-width: 769px) and (max-width: 1024px) {
+    
+  }
+  
