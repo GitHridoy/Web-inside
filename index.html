@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="https://kit.fontawesome.com/ccd2a9bd04.js" crossorigin="anonymous"></script>
 </head>
-<body>
+<body id="rgb">
     <!-- header start  -->
     <header id="header-main" class="header">
         <nav id="nav-main" class="nav">
@@ -23,7 +23,7 @@
             <li><a href="#About">About</a></li>
           </ul>
           <div class="login-main">
-            <button>Login</button>
+            <button id="login-opener">Login</button>
             <button>Register</button>
           </div>
         </nav>
@@ -34,19 +34,39 @@
     </header>
     <!-- header end  -->
     <!-- main start  -->
-    <section class="section" id="Home">
-         <div class="home-main">
-          <div class="box">
-            <h1>I am a <span class="main-title"></span></h1>
-            <h2 class="sub-title">UX-UI</h2>
-            <h3>Web-3</h3>
+    <main>
+      <!-- Login section start  -->
+      <section id="Loign" class="section">
+          <div id="pop-main">
+            <div id="login-pop">
+              <form action="">
+                 <h2 class="login-title">Login</h2>
+                 <div><input type="email" placeholder="Email" required></div>
+                 <div><input type="password" placeholder="Password" id="password"></div>
+                 <span id="eyeicon"><i class="fa-solid fa-eye"></i></span>
+                 <span id="eye-close"><i class="fa-regular fa-eye-slash"></i></span>
+                 <div id="check">Remamber<input type="checkbox"></div>
+                 <div><button id="login-btn">Login</button></div>
+                 <span id="close"><i class="fa-solid fa-xmark"></i></span>
+              </form>
+            </div>
           </div>
-          <div class="box">
-              <img src="images/perfil.png" alt="" class="main-img">
-              <h2 style="text-align: center;">Do somthing for you</h2>
-          </div>
+      </section>
+      <!-- Login section start  -->
+      <section class="section" id="Home">
+        <div class="home-main">
+         <div class="box">
+           <h1>I am a <span class="main-title"></span></h1>
+           <h2 class="sub-title">UX-UI</h2>
+           <h3>Web-3</h3>
          </div>
-    </section>
+         <div class="box">
+             <img src="images/perfil.png" alt="" class="main-img">
+             <h2 style="text-align: center;">Do somthing for you</h2>
+         </div>
+        </div>
+   </section>
+    </main>
     <!-- main end  -->
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script src="https://unpkg.com/scrollreveal"></script>

@@ -16,6 +16,36 @@ Close.onclick = function(){
     Head.classList.remove('head-spand')
 }
 
+// Login pop up section 
+let Login = document.getElementById('login-opener');
+let LoginPop = document.getElementById('login-pop');
+let EyeOpen = document.getElementById('eyeicon');
+let Pass = document.getElementById('password');
+let eyeClose = document.getElementById('eye-close');
+let ClosePop = document.getElementById('close');
+let PopMain = document.getElementById('pop-main');
+
+Login.onclick = function(){
+    LoginPop.classList.add('login-active');
+    PopMain.classList.add('pop-main-active');
+}
+EyeOpen.onclick = function(){
+     if(Pass.type === 'password'){
+        Pass.type = 'text';
+        eyeClose.classList.add('eye-active');
+     }  
+}
+eyeClose.onclick = function(){
+    if(Pass.type === 'text'){
+        Pass.type = 'password'
+        eyeClose.classList.remove('eye-active');
+        
+    }   
+}
+ClosePop.onclick = function(){
+    LoginPop.classList.remove('login-active');
+    PopMain.classList.remove('pop-main-active');
+}
 
 
 

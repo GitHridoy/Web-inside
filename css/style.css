@@ -10,12 +10,13 @@ html, body{
    padding: 0;
    overflow-x: hidden;
 }
+
 a, h2, h1, h3{
     margin: 0;
     padding: 0;
 }
 :root{
-    --main-color: rgb(0, 100, 214);
+    --main-color: rgb(0, 150, 177);
 }
 img{
     width: 100%;
@@ -25,6 +26,7 @@ img{
     width: 100%;
     height: 3.5rem;
     background-color: var(--main-color);
+    z-index: 12;
 }
 #nav-main{
     display: flex;
@@ -65,10 +67,20 @@ img{
 #nav-main ul li a:hover{
     color: rgb(253, 249, 0);
     transition: 0.7s;
+    
 }
 #nav-main button{
-    padding: 5px 15px;
+    padding: 7px 15px;
     cursor: pointer;
+    background-color: rgb(232, 207, 255);
+    border: 0;
+    border-radius: 3px;
+    margin-left: 1rem;
+}
+#nav-main button:hover{
+   background-color: #8a0000;
+   color: white;
+   transition: 0.2s ease-in-out;
 }
 .toggle{
     display: none;
@@ -76,6 +88,7 @@ img{
 /* Home section  */
 #Home{
     background-color: var(--main-color);
+    z-index: 2;
 }
 .home-main{
     display: flex;
@@ -86,7 +99,7 @@ img{
     
 }
 .home-main .box{
-    width: 450px;
+    width: 500px;
 }
 .box .main-title{
     font-size: 5rem;
@@ -106,6 +119,105 @@ img{
 .box img{
     width: 450px;
 
+}
+/* login section  */
+#pop-main{
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   background-color: rgb(0, 0, 0, 0.7);
+   visibility: hidden;
+   background-size: cover;
+}
+#pop-main.pop-main-active{
+   visibility: visible;
+   z-index: 555;
+}
+#login-pop{
+   position: absolute;
+   top: 15%;
+   left: 30%;
+   z-index: 1;
+   visibility: hidden;
+   transform: translateY(50px);
+   transition: 0.5s;
+   
+   
+}
+#login-pop.login-active{
+   visibility: visible;
+   transform: translateY(-50px);
+   transition: 0.5s;
+}
+form{
+   background-color: rgba(202, 202, 202, 0.6);
+   width: 500px;
+   height: auto;
+   padding: 100px;
+   border-radius: 10px;
+   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+}
+.login-title{
+   position: relative;
+   top: -20px;
+   color: white;
+}
+form input{
+   width: 85%;
+   margin-bottom: 2rem;
+   padding: 10px 7px;
+   border: 0;
+   outline: none;
+   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+   border-radius: 2px;
+}
+form #check{
+   position: relative;
+    left: 2rem;
+    width: 20px;
+    height: auto;
+    display: inline-flex;
+    flex-direction: row-reverse;
+    gap: 3px;
+    color: white;
+}
+form #login-btn{
+   position: relative;
+   top: -10px;
+   width: 88%;
+   padding: 8px 7px;
+   background-color: var(--main-color);
+   border: 0;
+   color: white;
+   font-size: 1rem;
+   cursor: pointer;
+   border-radius: 3px;
+}
+#eyeicon{
+   position: relative;
+   top: -56px;
+   left: 409px;
+   cursor: pointer;
+}
+#eyeicon.eye-remove{
+   visibility: hidden;
+}
+#eye-close{
+   position: relative;
+   top: -56px;
+   left: 385px;
+   visibility: hidden;
+   cursor: pointer;
+}
+#eye-close.eye-active{
+   visibility: visible;
+}
+#close{
+   position: relative;
+   top: -300px;
+   left: 550px;
+   color: white;
+   cursor: pointer;
 }
 
 
