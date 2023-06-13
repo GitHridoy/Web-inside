@@ -130,7 +130,7 @@ img{
        }
        #nav-main .logo{
           position: relative;
-          left: -11rem;
+          left: -7rem;
           top: 1rem;
        }
        #nav-main ul{
@@ -152,7 +152,7 @@ img{
           display: block;
           position: relative;
           top: -250px;
-          left: 390px;
+          left: 290px;
        }
        .toggle #menu-bar{
           position: relative;
