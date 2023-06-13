@@ -139,7 +139,7 @@ img{
 }
 #login-pop{
    position: absolute;
-   top: 15%;
+   top: 25%;
    left: 30%;
    z-index: 1;
    visibility: hidden;
